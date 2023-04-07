@@ -1,0 +1,14 @@
+schema: https://countries.trevorblades.com
+documents: './src/app/graphql/queries/*.ts'
+config:
+  addExplicitOverride: true
+  querySuffix: 'Service'
+  # namingConvention:
+  #   typeNames: 'change-case-all#lowerCase'
+  #   enumValues: 'change-case-all#lowerCase'
+generates:
+  ./src/app/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
